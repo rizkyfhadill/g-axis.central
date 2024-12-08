@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>G-Axis - Best Games Collections</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="assets/images/logo.png">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- transitions CSS -->
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+    <!-- Dropdown CSS -->
+    <link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+    <!-- modernizr js -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <style>
+  
+.donation-form {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color:  #ffc107;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-submit-btn {
+    background-color: #2e22d1;;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #ffc107;
+}
+
+.donation-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color:  #ffc107;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-label { 
+    font-weight: bold;
+    font-size: 16px;
+    color:  #ffc107;
+}
+
+.additional-content {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.additional-content h4 {
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.additional-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.additional-content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.additional-content ul li i {
+    font-size: 20px;
+    color: #00d30b;
+    margin-right: 10px;
+}
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transform: scale(0.8);
+            animation: scaleIn 0.5s ease-in-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .modal-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #00bfae;
+        }
+
+        .modal-content p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .modal-content button {
+            background-color: #2e22d1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-content button:hover {
+            background-color: #e68a00;
+        }
+
+        .error-modal .modal-content {
+            background-color: #b33b3b;
+        }
+
+        .error-modal h2 {
+            color: #fff;
+        }
+
+        .error-modal p {
+            color: #fff; 
+        }
+
+     
+        .modal-content.success-icon {
+            color: #00bfae;
+        }
+
+       
+        .modal-content.error-icon {
+            color: #fff;
+        }
+
+        .modal-content i {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="loader_bg"></div>
+
+    <header class="header-area" id="sticky-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-2">
+					<div class="logo">
+						<a href="index.html"> <img src="/assets/images/logo.png" width="200px" height="75px" alt="G-Axis logo"></a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="header-menu">
+						<ul>
+							<li><a href="/index.html">Home</a></li>
+							<li><a href="/about.html">About</a></li>
+							<li><a href="#">Type <i class="bi bi-plus"></i></a>
+								<div class="sub-menu">
+									<ul>
+										<li><a href="https://play.google.com/store/apps/">Mobile</a></li>
+										<li><a href="https://store.steampowered.com/">PC & Controller</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Genre <i class="bi bi-plus"></i></a>
+								<div class="sub-menu">
+									<ul>
+										<li><a href="/action.html">Action</a></li>
+										<li><a href="/casual.html">Casual</a></li>
+										<li><a href="/horror.html">Horror</a></li>
+										<li><a href="/rpg.html">RPG</a></li>
+										<li><a href="/story-rich.html">Story Rich</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="support.html">Supports</a></li>
+							<li><a href="donation.html">Donation</a></li>
+							<li>
+								<select id="language-select" onchange="changeLanguage(this.value)">
+									<option value="en">EN</option>
+									<option value="ina">INA</option>
+								</select>
+							</li>
+							
+						</ul>
+						<div class="main-btn">
+							<a href="/login.html" class="nest-btn">
+								<span class="nest-btn__text">Sign In</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <div class="container mt-5">
+        <h2 class="donation-title text-center">Support Our Journey: Donate Today</h2>
+        <div class="row mt-4">
+         
+            <div class="col-lg-8">
+                <form id="donationForm" class="p-4 shadow-sm bg-light">
+                    <div class="form-group mb-4">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" >
+                        <div id="nameError" class="error-message"></div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your active email address" >
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" id="amount" name="amount" class="form-control" placeholder="Your Amount">
+                        <div id="amountError" class="error-message"></div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="payment-method" class="form-label">Payment Method</label>
+                        <select id="payment-method" name="payment-method" class="form-select">
+                            <option value="">Choose a payment method</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                            <option value="DANA">DANA</option>
+                            <option value="Gopay">Gopay</option>
+                            <option value="OVO">OVO</option>
+                        </select>
+                        <div id="selectedPaymentMessage" style="display: none; font-size: 14px; color: #ffffff;"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Contribute Now</button>
+                </form>
+            </div>
+    
+            <div class="col-lg-4">
+                <div class="additional-content p-4 bg-secondary text-white rounded shadow-sm">
+                    <h4>Why Your Donation Matters</h4>
+                    <p>Your generosity empowers us to create better content, maintain our services, and continue innovating for the community. Together, we can make a lasting impact.</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Expand community-driven projects.</li>
+                        <li><i class="bi bi-check-circle"></i> Maintain high-quality service and features.</li>
+                        <li><i class="bi bi-check-circle"></i> Gain access to exclusive content and benefits.</li>
+                        <br>
+                    </ul>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="footer-area">
+        <div class="container">
+            <div class="footer-shape1 bounce-animate-slow">
+                <img src="assets/images/footer/footer-shape-1.png" alt="">
+            </div>
+            <div class="footer-shape2 bounce-animate-slow">
+                <img src="assets/images/footer/footer-shape-2.png" alt="">
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+                        <div class="footer-wiget-logo">
+                            <a href="index.html"> <img src="/assets/images/logo.png" width="200px" height="75px" alt="G-Axis logo"></a>
+                        </div>
+                        <div class="footer-wiget-text">
+                            <h4>Level up your gaming experience with the latest news, reviews, and guides in the gaming world</h4>
+                        </div>
+                        <div class="footer-socilal-title">
+                            <h4>Follow us on</h4>
+                        </div>
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+                        <div class="footer-wiget-title">
+                            <h4>Our Services</h4>
+                        </div>
+                        <div class="footer-wiget-menu">
+                            <ul>
+                                <li><a href="/about.html">About Us</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/support.html">Support Us Our</a></li>
+                                <li><a href="">Services Our</a></li>
+                                <li><a href="#">Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+                        <div class="footer-wiget-title">
+                            <h4>Get In Touch</h4>
+                        </div>
+                        <div class="footer-wiget-touch">
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="title">
+                                        <h6>Address</h6>
+                                    </div>
+                                    <div class="adress">
+                                        <a href="#">Jababeka Education Park</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="bi bi-telephone-plus-fill"></i>
+                                    </div>
+                                    <div class="title">
+                                        <h6>Phone</h6>
+                                    </div>
+                                    <div class="adress">
+                                        <a href="#">(+62) 881 570 6414</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="title">
+                                        <h6>Email</h6>
+                                    </div>
+                                    <div class="adress">
+                                        <a href="#">gaxisfive@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center mt-90">
+                <div class="col-lg-6 col-md-12">
+                    <div class="copyright-text">
+                        <p>© 2024 | Alrights reserved by G-Axis Team</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-privacy-menu">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="prgoress_scrollup">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <div id="errorModal" class="modal error-modal">
+        <div class="modal-content error-icon">
+            <i class="fa fa-times-circle"></i>
+            <h2>Error!</h2>
+            <p id="errorMessage">There was an issue with your submission.</p>
+            <button id="closeErrorModal">Close</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content success-icon">
+            <i class="fa fa-check-circle"></i>
+            <h2>Payment Success!</h2>
+            <p>Thank you for your donation! Your submission was successful.</p>
+            <button id="closeSuccessModal">Close</button>
+        </div>
+    </div>
+
+
+<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+<script>
+ $(document).ready(function () {
+    $("#donationForm").on("submit", function (event) {
+        event.preventDefault();
+
+        let isValid = true;
+
+        const name = $("#name").val().trim();
+        const email = $("#email").val().trim();
+        const amount = $("#amount").val().trim();
+        const paymentMethod = $("#payment-method").val();
+
+        $(".error-message").text("");
+
+        if (name === "") {
+            $("#nameError").text("Full name is required.");
+            isValid = false;
+        }
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email === "") {
+            $("#emailError").text("Email is required.");
+            isValid = false;
+        } else if (!emailPattern.test(email)) {
+            $("#emailError").text("Invalid email format.");
+            isValid = false;
+        }
+
+        if (amount === "") {
+            $("#amountError").text("Amount is required.");
+            isValid = false;
+        } else if (parseFloat(amount) < 1000) {
+            $("#amountError").text("Amount must be at least 1,000.");
+            isValid = false;
+        }
+        if (!paymentMethod) {
+            $("#paymentMethodError").text("Payment method must be selected.");
+            isValid = false;
+        }
+        if (!isValid) {
+            $("#errorModal").show();
+        } else {
+            $("#successModal").show();
+        }
+    });
+
+    $("#closeErrorModal").on("click", function () {
+        $("#errorModal").hide();
+    });
+
+    $("#closeSuccessModal").on("click", function () {
+        $("#successModal").hide();
+        location.reload(); 
+    });
+
+    $("#payment-method").on("change", function () {
+        const selectedMethod = $(this).val();
+        const messageDiv = $("#selectedPaymentMessage");
+
+        if (selectedMethod) {
+            messageDiv.text(`You have selected ${selectedMethod} as your payment method.`).fadeIn();
+        } else {
+            messageDiv.fadeOut();
+        }
+    });
+});
+
+
+</script>
+
+    <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- carousel js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- counterup js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <!-- waypoints js -->
+    <script src="assets/js/waypoints.min.js"></script>
+
+    <!-- wow js -->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!-- venobox js -->
+    <script src="venobox/venobox.js"></script>
+
+    <!--  animated-text js -->
+    <script src="assets/js/animated-text.js"></script>
+
+    <!-- venobox min js -->
+    <script src="venobox/venobox.min.js"></script>
+
+    <!-- isotope js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- jquery meanmenu js -->
+    <script src="assets/js/jquery.meanmenu.js"></script>
+
+    <!-- jquery scrollup js -->
+    <script src="assets/js/jquery.scrollUp.js"></script>
+
+    <!-- Slick Slider -->
+    <script src="assets/slick/slick.min.js"></script>
+
+    <script src="assets/js/jquery.barfiller.js"></script>
+
+    <!-- theme js -->
+    <script src="assets/js/theme.js"></script>
+
+    <!-- scroll js -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

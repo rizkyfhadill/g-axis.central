@@ -1,0 +1,19 @@
+
+[
+    {  
+        "email": "user@gmail.com",
+        "username": "user",
+        "password": "User123"
+    },
+    {
+        "email": "admin@gmail.com",
+        "username": "admin",
+        "password": "Admin123"
+    },
+    {   
+        "email": "rizkyfhadill31@gmail.com",
+        "username": "rizkyfadillah",
+        "password": "Admin123"
+    }
+]
+
